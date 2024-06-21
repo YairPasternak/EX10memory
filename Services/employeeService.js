@@ -16,20 +16,6 @@ const getEmployeeById = (id) => {
   return employee
 }
 
-// const createEmployee = (newEmployee) => {
-//   const { id, firstName, lastName, deptId } = newEmployee;
-//   newEmployee = {
-//     id: nextId,
-//     firstName,
-//     lastName,
-//     deptId,
-// //   };
-//   employee.push(newEmployee);
-//   nextId++;
-//   return "created";
-// };
-// }
-
 const updateEmployee = (id, newEmployeeData) => {
   const { firstName, lastName, deptId } = newEmployeeData
 
@@ -56,7 +42,7 @@ const deleteEmployee = (id) => {
   }
   return false
 }
-function createEmployee2(newEmployee) {
+function createEmployee(newEmployee) {
   const { firstName, lastName, deptId } = newEmployee
 
   // VALIDATIONS
@@ -96,5 +82,5 @@ module.exports = {
   // createEmployee,
   updateEmployee,
   deleteEmployee,
-  createEmployee2,
+  createEmployee,
 }

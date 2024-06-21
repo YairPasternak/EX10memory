@@ -11,6 +11,6 @@ router.put("/:id", employeeController.updateEmployee)
 
 router.delete("/:id", employeeController.deleteEmployee)
 
-router.post("/", employeeController.createEmployee2)
+router.post("/", employeeController.createEmployee)
 
 module.exports = router

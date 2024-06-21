@@ -32,12 +32,12 @@ async function deleteEmployee(req, res) {
     .json({ msg: isDelete ? "deleted successfully" : "not found" })
 }
 
-async function createEmployee2(req, res) {
+async function createEmployee(req, res) {
   debugger
   const newEmployee = req.body
   let createdEmployee
   try {
-    createdEmployee = employeeService.createEmployee2(newEmployee)
+    createdEmployee = employeeService.createEmployee(newEmployee)
   } catch (err) {
     return res.status(400).json({ error: err.message })
   }
@@ -47,8 +47,7 @@ async function createEmployee2(req, res) {
 module.exports = {
   getAllEmployees,
   getEmployeeById,
-  //createEmployee,
   updateEmployee,
   deleteEmployee,
-  createEmployee2,
+  createEmployee,
 }
