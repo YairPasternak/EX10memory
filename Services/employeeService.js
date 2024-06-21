@@ -1,3 +1,5 @@
+const { getDeaprtmentById } = require("./departmentService")
+
 let employees = [
   { id: 1, firstName: "keren", lastName: "duchan", deptId: 1 },
   { id: 2, firstName: "yair", lastName: "pas", deptId: 1 },
@@ -62,6 +64,10 @@ function createEmployee(newEmployee) {
     typeof deptId !== "number"
   ) {
     throw Error("Incorrect field type")
+  }
+  const dept = getDeaprtmentById(deptId)
+  if (dept === undefined) {
+    throw new Error(`Department with ID ${deptId} does not exist`)
   }
 
   newEmployee = {
