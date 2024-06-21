@@ -13,8 +13,7 @@ function getAllEmployees() {
 }
 
 const getEmployeeById = (id) => {
-  const employee = employees.find((employee) => (employee.id = id))
-  console.log(employee)
+  const employee = employees.find((employee) => employee.id === id)
   return employee
 }
 

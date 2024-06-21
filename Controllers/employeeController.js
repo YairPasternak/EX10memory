@@ -9,14 +9,6 @@ async function getEmployeeById(req, res) {
   return res.status(200).json(employeeService.getEmployeeById(+id))
 }
 
-//createEmployee
-// async function createEmployee(req, res) {
-//   const newEmployee = req.body;
-//   employeeService.createEmployee(newEmployee);
-//   console.log("newEmployee", newEmployee);
-//   return res.status(200).json({ status: "created" });
-// }
-
 async function updateEmployee(req, res) {
   const { id } = req.params
   const updatedFieldsEmployee = req.body
